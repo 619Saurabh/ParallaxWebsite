@@ -1,0 +1,154 @@
+*{                                  
+
+    margin: 0;    
+    padding: 0;   
+    box-sizing: border-box;  
+    
+}
+
+#wrapper{
+
+    height: 100vh;  
+    overflow-y: auto;  
+    overflow-x: hidden; 
+    perspective: 10px;   
+
+}
+
+.container{
+
+    position: relative;
+    height: 100%;
+ 
+    display: flex;       
+    
+     /*to align flex-items  h1(ADVENTURE) in center horizontally and vertically */
+    justify-content: center;    
+    align-items: center;
+    
+    transform-style: preserve-3d;   /* to retain 3D space in child element(container) which is enabled in parent element(wrapper)*/
+    z-index: -1;
+
+   
+}
+
+.background{
+
+    transform: translateZ(-40px) scale(5);/* Moved background image to 40px inward in Z-axis and scaled 5 times the background image in X and Y direction*/
+}
+
+.foreground{
+
+    transform: translateZ(-20px) scale(3);/* Moved foreground image to 20px inward in Z-axis and scaled 3 times the background image in X and Y direction*/
+}
+
+
+
+.background , .foreground{
+
+    position: absolute;  /* to overlap both background and foreground images*/
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1; /* Define the order of an element in overlapping. Elements with a negative z-index value appear behind the elements 
+                 without having z-index value*/
+                         
+
+}
+
+h1{
+
+    position: absolute;
+    top: 5rem;
+    font-size: 10rem;
+    letter-spacing: 4px;
+    color: white;  
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+   
+}
+
+
+section{
+
+    background-color: rgb(45,45,45);
+    color: white;      
+    padding: 5rem 0;
+}
+
+
+.secHeading{
+
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+
+
+.text{                            
+
+    font-size: 1.5rem;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+
+
+.bg{
+
+    position: relative;
+    width: 100%;               
+    background-attachment: fixed;/*The background image will be fixed in its position and remaining things on the top of it remains scrolling.*/
+    height: 500px;
+    background-position: center;  /*to center the background image*/
+    background-size: cover;     /* added this property since unable to see proper background images and to fit in the screen properly*/
+
+
+}
+
+
+.desc{
+
+    position: absolute;     
+    background-color: white;
+    padding: 0.5rem 2.5rem;
+   
+
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);    
+    color: black;    
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+
+
+.bg1{
+
+    background-image: url(sport-1.jpg);
+}
+
+
+.bg2{
+
+    background-image: url(sport-2.jpg);
+}
+
+
+.bg3{
+
+    background-image: url(sport-3.jpg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
